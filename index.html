@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kairos - Clínica Veterinaria para Gatos</title>
+  <title>Kairos QA 🐱 - Clínica Veterinaria para Gatos</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- QA BANNER -->
+  <div class="qa-banner">🧪 Entorno QA — Branch de pruebas 🐱🐱🐱</div>
 
   <!-- NAV -->
   <header class="navbar">
@@ -19,6 +22,7 @@
         <ul class="nav-links">
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#michis">Michis 🐱</a></li>
           <li><a href="#testimonios">Testimonios</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -40,11 +44,21 @@
         </div>
       </div>
       <div class="hero-illustration" aria-hidden="true">
-        <div class="cat-card">
-          <span class="cat-emoji">🐱</span>
-          <div class="card-info">
-            <strong>+5 000 pacientes</strong>
-            <span>atendidos con amor</span>
+        <div class="hero-cats-stack">
+          <div class="cat-card">
+            <span class="cat-emoji">🐱</span>
+            <div class="card-info">
+              <strong>+5 000 pacientes</strong>
+              <span>atendidos con amor</span>
+            </div>
+          </div>
+          <div class="floating-cats">
+            <span title="Michi curioso">😸</span>
+            <span title="Michi dormido">😴</span>
+            <span title="Michi travieso">😼</span>
+            <span title="Michi enamorado">😻</span>
+            <span title="Michi llorón">😿</span>
+            <span title="Michi enojado">🙀</span>
           </div>
         </div>
       </div>
@@ -89,6 +103,77 @@
           <h3>Hospitalización</h3>
           <p>Área tranquila, sin perros, para que tu gato se recupere cómodo y seguro.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MICHIS DEL MES -->
+  <section id="michis" class="section michis">
+    <div class="container">
+      <div class="section-header">
+        <h2>🐾 Michis del mes 🐾</h2>
+        <p>Conoce a algunos de nuestros pacientes más adorables de mayo 2026.</p>
+      </div>
+      <div class="michis-grid">
+        <div class="michi-card">
+          <div class="michi-avatar">🐈</div>
+          <div class="michi-info">
+            <h3>Mochi</h3>
+            <span class="michi-breed">Persa · 4 años</span>
+            <p>Experto en siestas largas y derretir corazones. Vino por vacunas y se robó el corazón del equipo.</p>
+            <span class="michi-status healthy">✅ Sano y feliz</span>
+          </div>
+        </div>
+        <div class="michi-card">
+          <div class="michi-avatar">🐈‍⬛</div>
+          <div class="michi-info">
+            <h3>Luna</h3>
+            <span class="michi-breed">Bombay · 2 años</span>
+            <p>La reina de la clínica. Completó su plan de vacunación y ahora es embajadora felina oficial.</p>
+            <span class="michi-status healthy">✅ Sana y feliz</span>
+          </div>
+        </div>
+        <div class="michi-card">
+          <div class="michi-avatar">😸</div>
+          <div class="michi-info">
+            <h3>Simba</h3>
+            <span class="michi-breed">Maine Coon · 7 años</span>
+            <p>El más grande y más dramático. Necesitó cirugía dental pero ya ronronea como nuevo.</p>
+            <span class="michi-status recovery">💙 En recuperación</span>
+          </div>
+        </div>
+        <div class="michi-card">
+          <div class="michi-avatar">🐱</div>
+          <div class="michi-info">
+            <h3>Nube</h3>
+            <span class="michi-breed">Angora · 3 años</span>
+            <p>Blanca y esponjosa como su nombre. Llegó tímida y se fue queriendo volver solo para jugar.</p>
+            <span class="michi-status healthy">✅ Sana y feliz</span>
+          </div>
+        </div>
+        <div class="michi-card">
+          <div class="michi-avatar">😼</div>
+          <div class="michi-info">
+            <h3>Diablo</h3>
+            <span class="michi-breed">Siamés · 5 años</span>
+            <p>Su nombre dice mucho, pero en el fondo es un bebé. Aquí lo tratamos con guantes de terciopelo.</p>
+            <span class="michi-status healthy">✅ Sano y feliz</span>
+          </div>
+        </div>
+        <div class="michi-card">
+          <div class="michi-avatar">😻</div>
+          <div class="michi-info">
+            <h3>Canela</h3>
+            <span class="michi-breed">Atigrada · 1 año</span>
+            <p>La más nueva de nuestra familia. Primera consulta, primeras vacunas y ya es fan número uno de Kairos.</p>
+            <span class="michi-status new">🌟 Nueva paciente</span>
+          </div>
+        </div>
+      </div>
+      <!-- contador animado de michis -->
+      <div class="cat-counter">
+        <span class="counter-number" id="catCount">0</span>
+        <span class="counter-label">michis atendidos este mes 🐾</span>
       </div>
     </div>
   </section>
@@ -226,6 +311,29 @@
       btn.textContent = '¡Mensaje enviado! Te contactaremos pronto 🐱';
       btn.disabled = true;
       btn.style.background = '#2d6a4f';
+    });
+
+    // Animated cat counter
+    const target = 312;
+    const el = document.getElementById('catCount');
+    if (el) {
+      let count = 0;
+      const step = Math.ceil(target / 60);
+      const timer = setInterval(() => {
+        count = Math.min(count + step, target);
+        el.textContent = count;
+        if (count >= target) clearInterval(timer);
+      }, 25);
+    }
+
+    // Floating cats wiggle on hover
+    document.querySelectorAll('.floating-cats span').forEach(cat => {
+      cat.addEventListener('mouseenter', () => {
+        cat.style.transform = 'scale(1.4) rotate(-10deg)';
+      });
+      cat.addEventListener('mouseleave', () => {
+        cat.style.transform = '';
+      });
     });
   </script>
 </body>
